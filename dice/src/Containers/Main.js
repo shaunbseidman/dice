@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Main.css';
+import classes from './Main.css'
 
 
 class Main extends Component {
@@ -32,9 +32,10 @@ class Main extends Component {
   }
 
   render() {
-    return (<div>
+    return (
+      <div>
       <h1>Roll the Dice</h1>
-      <p>{this.state.number}</p>
+      <p className={classes.Main}>{this.state.number}</p>
       <button onClick={this.getNumber}>Roll the Dice</button>
     </div>)
   }
